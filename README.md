@@ -20,11 +20,17 @@ For installation(linux):
 clone the repository
 cd to directory
 on bash
+
     composer install
+
     cp .env.example .env
+
     php artisan key:generate
 
-Open .env file with editor and add required db credentials
+
+Open .env file with editor and add required db credentials 
+and then on bash
+
 
     php artisan serve
 
