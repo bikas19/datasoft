@@ -32,7 +32,11 @@
                     <div class="logo-wrapper">
 
                     <img src="{{asset('image/logo.png')}}" class="img img-fluid" alt="" srcset="">
-                <p>{{config('app.name')}}</p>
+                    <div>
+                        <p>{{config('app.name')}}</p>
+                        <p class='small'>Authentic Nepali Kitchen</p>
+                    </div>
+
                </div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
