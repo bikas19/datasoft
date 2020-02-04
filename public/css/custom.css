@@ -1,0 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Montez);
+.logo-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo-wrapper p {
+    display: block;
+    color: #21243d;
+    font-size: 30px;
+    font-family: 'Montez', 'comic-sans';
+}
+
+.logo-wrapper img {
+    max-width: 60px;
+    margin-right: 10px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #21243d;
+}

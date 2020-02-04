@@ -3,6 +3,21 @@
 use Illuminate\Support\Str;
 
 $DATABASE_URL = parse_url(getenv("DATABASE_URL"));
+$pgsql=[];
+if(count($DATABASE_URL)>1){
+    $pgsql=[
+        'driver' => 'pgsql',
+        'host' => $DATABASE_URL["host"],
+        'port' => $DATABASE_URL["port"],
+        'database' => ltrim($DATABASE_URL["path"], "/"),
+        'username' => $DATABASE_URL["user"],
+        'password' => $DATABASE_URL["pass"],
+        'charset' => 'utf8',
+        'prefix' => '',
+        'schema' => 'public',
+        'sslmode' => 'require',
+    ];
+}
 return [
 
     /*
@@ -64,18 +79,7 @@ return [
             ]) : [],
         ],
 
-        'pgsql' => [
-            'driver' => 'pgsql',
-            'host' => $DATABASE_URL["host"],
-            'port' => $DATABASE_URL["port"],
-            'database' => ltrim($DATABASE_URL["path"], "/"),
-            'username' => $DATABASE_URL["user"],
-            'password' => $DATABASE_URL["pass"],
-            'charset' => 'utf8',
-            'prefix' => '',
-            'schema' => 'public',
-            'sslmode' => 'require',
-        ],
+        'pgsql' => $pgsql,
 
         'sqlsrv' => [
             'driver' => 'sqlsrv',

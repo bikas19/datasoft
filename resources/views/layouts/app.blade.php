@@ -15,17 +15,25 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     @yield('links')
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+
+    <style>
+
+    </style>
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    <div class="logo-wrapper">
+
+                    <img src="{{asset('image/logo.png')}}" class="img img-fluid" alt="" srcset="">
+                <p>{{config('app.name')}}</p>
+               </div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -73,12 +81,20 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4" style='min-height:80vh'>
             @yield('content')
         </main>
     </div>
 
 
+    <footer>
+        <div class="container">
+            <div class="bg-dark">
+                <p class="text-center text-white py-4">All rights reserved</p>
+
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>

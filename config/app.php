@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Data Analysis and Reporting Software'),
+    'name' => 'भान्साघर',
 
     /*
     |--------------------------------------------------------------------------
