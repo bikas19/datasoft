@@ -18,3 +18,9 @@ Route::get('/',function(){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::prefix('backend')->group(function(){
+    Route::get('add-food','FoodController@create');
+    Route::post('add-food','FoodController@store');
+});

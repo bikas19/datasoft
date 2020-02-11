@@ -17,15 +17,15 @@ class CreateFoodsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('category_id');
             $table->string('name');
-            $table->string('slug');
+            $table->string('slug')->default('');
             $table->string('components');
-            $table->string('notes');
+            $table->string('image')->default('');
             $table->mediumText('description');
             $table->string('price');
-            $table->string('vat');
-            $table->unsignedInteger('is_offer');
-            $table->unsignedInteger('is_special');
-            $table->unsignedInteger('status');
+            $table->string('vat')->default('0');
+            $table->unsignedInteger('is_offer')->default(0);
+            $table->unsignedInteger('is_special')->default(0);
+            $table->unsignedInteger('status')->default(1);
             $table->timestamps();
         });
     }

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Food extends Model
 {
     //
-    protected $fillable = ['category_id', 'name','slug', 'components', 'notes', 'description', 'price' ,'vat', 'is_offer', 'is_special', 'status'];
+    protected $fillable = ['category_id','image', 'name','slug', 'components', 'notes', 'description', 'price' ,'vat', 'is_offer', 'is_special', 'status'];
     public function category(){
         return $this->belongsTo('App\Category');
     }
