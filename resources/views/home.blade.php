@@ -21,12 +21,12 @@
                     @if( auth()->user()->role == null )
 
                     @elseif(auth()->user()->role->slug=='admin')
-                    <button class='btn btn-primary' href='/backend/add-manager'>Add new manager</button>
-                    <button class='btn btn-primary' href='/backend/add-employee'>Add new employee</button>
-                    <button class='btn btn-primary' href='/backend/add-food'>Add new food item</button>
+                    <a class='btn btn-primary' href='/backend/add-manager'>Add new manager</a>
+                    <a class='btn btn-primary' href='/backend/add-employee'>Add new employee</a>
+                    <a class='btn btn-primary' href='/backend/add-food'>Add new food item</a>
                     @elseif( auth()->user()->role->slug == 'manager')
-                    <button class='btn btn-primary' href='/backend/add-employee'>Add new employee</button>
-                    <button class='btn btn-primary' href='/backend/add-food'>Add new food item</button>
+                    <a class='btn btn-primary' href='/backend/add-employee'>Add new employee</a>
+                    <a class='btn btn-primary' href='/backend/add-food'>Add new food item</a>
                     @elseif( auth()->user()->role->slug == 'employee')
 
 
