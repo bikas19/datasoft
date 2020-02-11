@@ -16,7 +16,9 @@ class Food extends Model
 
 
     public function delete(){
+        if($this->image != 'image/logo.png')
         Storage::delete(public_path($this->image));
+        dd($this->image);
         return parent::delete();
 
     }
