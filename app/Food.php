@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Food extends Model
 {
@@ -12,14 +13,11 @@ class Food extends Model
         return $this->belongsTo('App\Category');
     }
 
-    public function images(){
-        return $this->hasMany('App\Food_Image', 'food_id');
-    }
+
 
     public function delete(){
-        foreach($this->images as $image){
-            $image->delete();
-        }
+        Storage::delete(public_path($this->image));
+        return parent::delete();
 
     }
 }

@@ -4,6 +4,9 @@
 @section('content')
 
 <div class="container">
+@foreach ($errors->all() as $message) 
+<p class='alert alert-danger'>{{$message}}</p>
+@endforeach
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -18,7 +21,7 @@
                         @csrf 
                         <div class="form-group">
                             <label for="Name">Name of food item</label>
-                            <input type="text" name='name' class="form-control">
+                            <input type="text" value='{{old("name")}}' name='name' class="form-control">
                         </div>
 
                         <div class="form-group">
@@ -49,12 +52,12 @@
 
                         <div class="form-group">
                             <label for="Name">Price of food item</label>
-                            <input type="number" name='price' class="form-control">
+                            <input type="text" value='{{old("price")}}' name='price' class="form-control">
                         </div>
 
                         <div class="form-group">
                             <label for="Name">Components of food item</label>
-                            <input type="text" name='components' class="form-control">
+                            <input type="text" value='{{old("components")}}' name='components' class="form-control">
                         </div>
 
                         <div class="form-group">

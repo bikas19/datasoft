@@ -14,19 +14,19 @@
                     </div>
                     @endif
 
-                    Namastey {{auth()->user()->name}}ji,
+                    Namastey {{auth()->user()->name}} ji,
                 </div>
 
                 <div class="card-footer">
                     @if( auth()->user()->role == null )
 
                     @elseif(auth()->user()->role->slug=='admin')
-                    <a class='btn btn-primary' href='/backend/add-manager'>Add new manager</a>
-                    <a class='btn btn-primary' href='/backend/add-employee'>Add new employee</a>
-                    <a class='btn btn-primary' href='/backend/add-food'>Add new food item</a>
+                    <a class='btn btn-primary mt-2' href='/backend/add-manager'>Add new manager</a>
+                    <a class='btn btn-primary mt-2' href='/backend/add-employee'>Add new employee</a>
+                    <a class='btn btn-primary mt-2' href='/backend/add-food'>Add new food item</a>
                     @elseif( auth()->user()->role->slug == 'manager')
-                    <a class='btn btn-primary' href='/backend/add-employee'>Add new employee</a>
-                    <a class='btn btn-primary' href='/backend/add-food'>Add new food item</a>
+                    <a class='btn btn-primary mt-2' href='/backend/add-employee'>Add new employee</a>
+                    <a class='btn btn-primary mt-2' href='/backend/add-food'>Add new food item</a>
                     @elseif( auth()->user()->role->slug == 'employee')
 
 
