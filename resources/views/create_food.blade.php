@@ -4,17 +4,14 @@
 @section('content')
 
 <div class="container">
-@foreach ($errors->all() as $message) 
-<p class='alert alert-danger'>{{$message}}</p>
-@endforeach
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Add new food item</div>
                 <div class="card-body">
-                    
-                    <form action="" method="post" enctype="multipart/form-data"> 
-                        @csrf 
+
+                    <form action="" method="post" enctype="multipart/form-data">
+                        @csrf
                         <div class="form-group">
                             <label for="Name">Name of food item</label>
                             <input type="text" value='{{old("name")}}' name='name' class="form-control">
@@ -64,7 +61,7 @@
                         <button type='submit' class='btn btn-primary'>Submit</button>
                     </form>
                 </div>
-                
+
             </div>
         </div>
     </div>

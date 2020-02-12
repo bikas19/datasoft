@@ -19,6 +19,7 @@
 
                 <div class="card-footer">
                     @if( auth()->user()->role == null )
+                    <a class='btn btn-primary mt-2' href='/cart'>Your shopping cart</a>
 
                     @elseif(auth()->user()->role->slug=='admin')
                     <a class='btn btn-primary mt-2' href='/backend/add-manager'>Add new manager</a>

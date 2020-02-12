@@ -17,6 +17,15 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/add-to-cart/{id}','CartItemController@store');
+
+Route::get('/cart','CartItemController@index');
+
+Route::post('/cart/{id}','CartItemController@update');
+
+Route::get('/cart/{id}/delete','CartItemController@destroy');
+
+Route::get('/food/{id}',function(){})->name('food.show');
 
 Route::prefix('backend')->group(function(){
     Route::get('add-food','FoodController@create');

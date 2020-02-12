@@ -20,7 +20,7 @@
                 <div class="card-body">
                     <h4 class="card-title">{{$food->name}}</h4>
                     <h6 class="card-subtitle mb-2 text-muted">${{$food->price}}</h6>
-                    <a href="#" class="card-link">Add to cart</a>
+                    <a href="/add-to-cart/{{$food->id}}" class="card-link">Add to cart <i class="fas fa-shopping-cart"></i> </a>
                     @can('modify')
                     <a href="#" class="card-link text-primary">Edit</a>
                     <a href="{{route('delete-food',$food->id)}}" id class="card-link text-danger">Delete</a>

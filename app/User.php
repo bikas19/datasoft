@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use PDO;
 
 class User extends Authenticatable
 {
@@ -47,5 +48,9 @@ class User extends Authenticatable
     public function hasRole($str){
         $str = strtolower($str);
         return $this->role->slug == $str;
+    }
+
+    public function cartitems(){
+        return $this->hasMany('App\CartItem');
     }
 }
