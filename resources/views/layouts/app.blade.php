@@ -88,6 +88,13 @@
         </nav>
 
         <main class="py-4" style='min-height:80vh'>
+        <div class="container">
+        @if(session('message'))
+                <div class="alert alert-primary">
+                    {{session('message')}}
+                </div>
+                    @endif
+        </div>
             @yield('content')
         </main>
     </div>

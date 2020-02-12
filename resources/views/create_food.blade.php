@@ -12,11 +12,7 @@
             <div class="card">
                 <div class="card-header">Add new food item</div>
                 <div class="card-body">
-                    @if(session('message'))
-                <div class="alert alert-primary">
-                    {{session('message')}}
-                </div>
-                    @endif
+                    
                     <form action="" method="post" enctype="multipart/form-data"> 
                         @csrf 
                         <div class="form-group">

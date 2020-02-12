@@ -3,14 +3,15 @@
 @section('content')
 <div class="container">
 
-@if($foods->count()==0)
+
+
+    <h2>Foods</h2>
+    <hr>
+    @if($foods->count()==0)
     <div class="jumbotron">
         <p>No products added. Please check back later.</p>
     </div>
     @endif
-
-    <h2>Foods</h2>
-    <hr>
     <div class="row justify-content-center">
         @foreach($foods as $food)
         <div class="col-md-4">
