@@ -22,7 +22,7 @@ class CartItemController extends Controller
     public function index()
     {
         //
-        $items = CartItem::with('food')->where('user_id', auth()->user()->id)->get();
+        $items = CartItem::with('food')->has('food')->where('user_id', auth()->user()->id)->get();
         return view('cart', compact('items'));
     }
 
