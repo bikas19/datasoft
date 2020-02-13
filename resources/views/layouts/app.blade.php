@@ -68,7 +68,7 @@
                                 <span class='mx-2 fas fa-shopping-cart'></span>
                                 Cart
                                 @if(auth()->user()->cartitems->count()>0)
-                                <span class="badge badge-danger">{{auth()->user()->cartitems->count()}}</span>
+                                <span class="badge badge-danger">{{auth()->user()->cartitems()->has('food')->count()}}</span>
                                 @endif
                             </a>
                         </li>
