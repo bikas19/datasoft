@@ -197,6 +197,8 @@
                         <div class="order-number">123456789</div>
                     </div>
                     <div class="order-footer">Thank you!</div>
+
+                    <a href="/" class="btn btn-primary">Go to homepage</a>
                 </div>
                 <div class="jagged-edge"></div>
             </div>

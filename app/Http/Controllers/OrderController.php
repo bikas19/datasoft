@@ -25,7 +25,7 @@ class OrderController extends Controller
     public function create()
     {
         //
-        $items = auth()->user()->cartitems;
+        $items = auth()->user()->cartitems()->with('food')->has('food')->get();
         return view('place-order',compact('items'));
     }
 
@@ -39,6 +39,12 @@ class OrderController extends Controller
     {
         //
         // dd($request);
+        $items = auth()->user()->cartitems;
+
+        foreach($items as $item){
+            $item->delete();
+        }
+
         return view('order-completed');
     }
 
