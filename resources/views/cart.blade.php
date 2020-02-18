@@ -66,7 +66,7 @@
                     </table>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class='btn btn-danger float-right'>Place Order Now</a>
+                    <a href="/place-order" class='btn btn-danger float-right'>Place Order Now</a>
                 </div>
             </div>
         </div>

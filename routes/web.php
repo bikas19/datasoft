@@ -21,6 +21,10 @@ Route::get('/add-to-cart/{id}','CartItemController@store');
 
 Route::get('/cart','CartItemController@index');
 
+Route::get('/place-order','OrderController@create');
+Route::post('/place-order','OrderController@store');
+
+
 Route::post('/cart/{id}','CartItemController@update');
 
 Route::get('/cart/{id}/delete','CartItemController@destroy');

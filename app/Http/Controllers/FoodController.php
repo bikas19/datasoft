@@ -24,7 +24,7 @@ class FoodController extends Controller
             'price' => 'required|numeric',
             'image' => 'nullable|image',
             'other_category' => 'nullable|string',
-            'components' => 'nullable|string'
+            'components' => 'required|nullable|string'
         ]);
         $category_id = 0;
         if (Category::find($request->category_id)) {
