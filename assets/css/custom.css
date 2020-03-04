@@ -1,0 +1,31 @@
+@import url(https://fonts.googleapis.com/css?family=Sumana|Hi+Melody);
+.logo-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo-wrapper p {
+    display: block;
+    color: #21243d;
+    font-size: 30px;
+    margin: 0px;
+    font-family: 'Sumana', 'comic-sans';
+}
+
+.logo-wrapper p.small {
+    font-size: 15px;
+    margin-left: 5px;
+    line-height: 1;
+    font-family: 'Hi Melody', cursive;
+    font-weight: 550;
+}
+
+.logo-wrapper img {
+    max-width: 60px;
+    margin-right: 10px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #21243d;
+}
